@@ -9,11 +9,11 @@ public class PageReplacement {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		ArrayList<Integer> queue = new ArrayList<>(4);
-		int decisao = 0;
-		boolean temValor=false;
+		int valor = 0;
+		boolean temValor = false;
 
 
-		for(int i = 0; i<10; i++) {
+		for(int i = 0; i < 15; i++) {
 
 			System.out.print("Digite um valor para ser adicionado a lista: ");
 
@@ -21,7 +21,7 @@ public class PageReplacement {
 
 				try {
 
-					decisao = scan.nextInt();
+					valor = scan.nextInt();
 					temValor = true;
 
 				} catch (InputMismatchException e) {
@@ -34,7 +34,7 @@ public class PageReplacement {
 
 			}while(!temValor);
 
-			System.out.print(" - Adicionando " + decisao);
+			System.out.print(" - Adicionando " + valor);
 
 			if(queue.size() == 4) {
 
@@ -42,7 +42,7 @@ public class PageReplacement {
 				queue.remove(0);
 
 			}
-			queue.add(decisao);
+			queue.add(valor);
 
 			System.out.println("\n\n*********************************************************************");
 			System.out.println("Resultado = " + queue);
